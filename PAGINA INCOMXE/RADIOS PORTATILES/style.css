@@ -1,0 +1,668 @@
+/* BARRA PRINCIPAL INFORMACION CONTACTO */
+* {
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.heading {
+    font-size: 4rem;
+    text-align: center;
+    padding: 6rem 1rem 0 0;
+    letter-spacing: .2rem;
+    font-weight: 600;
+}
+
+*::selection {
+    background-color: rgba(0, 150, 255, 0.1); /* Azul claro muy transparente */
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+body * {
+    text-transform: none;
+}
+
+header {
+    background-color: #ffffff;
+    color: #fff;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #000; /* Color negro para el icono */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #a6a6a6;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+header .navbar ul li .active,
+header .navbar ul li a:hover {
+    color: #121211;
+}
+
+.navbar ul li {
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li a {
+    color: #a6a6a6;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li a .fa-phone {
+    margin-right: 10px;
+    order: -1;
+}
+
+.navbar ul li a .fa-envelope {
+    margin-right: 10px;
+    order: -1;
+}
+
+.navbar ul li a .fa-whatsapp {
+    margin-right: 10px;
+    order: -1;
+}
+
+/* BARRA SECUNDARIA INFORMACION CONTACTO */
+.secondary-header {
+    background-color: rgb(234, 230, 230); /* Cambia el color de fondo */
+}
+
+.secondary-header .navbar ul li a {
+    color: #5e5d5d; /* Cambia el color del texto */
+}
+
+.secondary-header .navbar ul li:last-child {
+    margin-left: 60rem; /* Mueve el elemento "Ubicacion" hacia la derecha */
+}
+
+.navbar ul li a .fa-location-dot {
+    margin-right: 10px;
+    order: -1;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+}
+
+.support-box {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 250px;
+}
+
+.support-box h3 {
+    margin-top: 0;
+}
+
+.support-box p {
+    margin: 10px 0;
+}
+
+.support-box .close-btn {
+    text-align: right;
+    cursor: pointer;
+    color: red;
+}
+
+.navbar ul li .submenu {
+    display: none;
+    list-style: none;
+    padding-left: 20px;
+}
+
+.navbar ul li.menu-item-has-children.active .submenu {
+    display: block;
+}
+
+.menu-item-has-children a {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-item-has-children i {
+    margin-left: 1rem; /* Ajusta este valor según tus necesidades */
+    transform: rotate(0deg); /* Flecha inicialmente hacia la derecha */
+    transition: transform 0.3s; /* Añade una transición suave */
+}
+
+.menu-item-has-children i.rotate {
+    transform: rotate(90deg); /* Gira la flecha hacia arriba */
+}
+
+header .navbar .hide-in-secondary {
+    display: none;
+    /* Ajusta otros estilos según tu diseño */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+    nav.navbar {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #ffffff;
+        padding: 10px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+    nav.navbar.active {
+        display: flex;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    nav ul li {
+        width: 100%;
+        margin: 10px 0;
+    }
+    nav ul li a {
+        width: 100%;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    header .navbar .hide-in-secondary {
+        display: block;
+    }
+}
+
+/* MENÚ DE REGRESO BREADCRUMB */
+
+.breadcrumb {
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 10px;
+    overflow-x: auto; /* Permitir desplazamiento horizontal en dispositivos móviles */
+}
+.breadcrumb ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 5px;
+}
+.breadcrumb ul li {
+    display: inline;
+}
+.breadcrumb ul li a {
+    text-decoration: none;
+    color: #000;
+}
+.breadcrumb ul li::after {
+    content: ">";
+    margin: 0 5px;
+}
+.breadcrumb ul li:last-child::after {
+    content: "";
+}
+
+.breadcrumb::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #000; /* Line color */
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .breadcrumb {
+        font-size: 1em; /* Reducir el tamaño de fuente en dispositivos móviles */
+    }
+}
+
+/* Contenedor principal BUSCADOR */
+
+.content {
+    margin-top: 1rem;
+}
+
+#searchBar { 
+    padding: 5px;
+    border-radius: 15px; /* Forma ovalada */
+    margin-right: 20px; /* Ajusta el margen derecho */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del título */
+.container {
+    display: flex;
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+}
+
+.container h1 {
+    text-align: left;
+    margin: 0 25rem 0 0; /* Elimina el margen para alinear con el input */
+    white-space: nowrap;
+    font-size: 45px;
+    color: #446280;
+    margin-left: 20px;
+}
+
+/* Estilo del texto explicativo */
+.description {
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 18px;
+    color: #333;
+    padding: 0 20px;
+}
+
+@media screen and (max-width: 768px) {
+    /* Centra el buscador debajo del menú breadcrumb */
+    .content {
+        text-align: center;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column-reverse; /* Cambia el orden de los elementos */
+        align-items: center;
+    }
+
+    #searchBar { 
+        margin: 10px auto; /* Centra el buscador horizontalmente */
+        width: calc(100% - 40px); /* Ancho del buscador */
+        max-width: 300px; /* Máximo ancho del buscador */
+    }
+
+    .container h1 {
+        margin: 10px auto; /* Centra el título horizontalmente */
+        font-size: 20px; /* Tamaño de fuente más pequeño */
+         text-align: center;
+    }
+    
+    .description {
+        text-align: center;
+        margin-top: 10px; /* Ajusta el margen superior de la descripción */
+    }
+}
+
+/* RADIOS */
+
+.containerr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.radio-column {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.radio-item {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 60px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.radio-item img {
+    width: 120px;
+    height: 100px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+
+.radio-item .content {
+    flex: 1;
+}
+
+.radio-item .content h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #446280;
+    margin-left: 12px;
+}
+
+.radio-item .content p {
+    margin: 5px 0 0 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.radio { 
+    margin: 10px; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    display: flex; 
+    align-items: center; 
+}
+
+.radio img { 
+    margin-right: 10px; 
+    width: 100px; 
+    height: auto; 
+}
+
+.contents { 
+    flex: 1; 
+}
+
+@media screen and (max-width: 768px) {
+    /* Estilo para dispositivos móviles */
+
+    /* Cambia el contenedor a una lista */
+    .containerr {
+        flex-direction: column; /* Cambia la dirección de los elementos a columnas */
+    }
+
+    /* Estilo de cada elemento de la lista */
+    .radio-column {
+        width: 100%; /* Ocupa todo el ancho disponible */
+    }
+
+    /* Estilo de cada radio-item */
+    .radio-item {
+        display: flex; /* Usa un layout flexbox */
+        border: 1px solid #ccc; /* Borde para cada elemento */
+        border-radius: 10px; /* Borde redondeado */
+        margin-bottom: 10px; /* Espacio entre cada elemento */
+    }
+
+    /* Estilo de la imagen */
+    .radio-item img {
+        width: 120px; /* Ancho de la imagen */
+        height: auto; /* Altura automática */
+        border-radius: 10px 0 0 10px; /* Borde redondeado solo en la esquina izquierda */
+    }
+
+    /* Estilo del contenido */
+    .radio-item .content {
+        flex: 1; /* Ocupa todo el espacio disponible */
+        padding: 10px; /* Espaciado interno */
+    }
+
+    /* Estilo del título */
+    .radio-item .content h3 {
+        margin: 0; /* Elimina el margen por defecto */
+        font-size: 1.2em; /* Tamaño del título */
+        color: #446280; /* Color del título */
+    }
+
+    /* Estilo del texto */
+    .radio-item .content p {
+        margin: 5px 0 0 0; /* Espacio alrededor del texto */
+        font-size: 1.2em; /* Tamaño del texto */
+        color: #333; /* Color del texto */
+    }
+}
+
+
+/* RECUADRO FINAL */
+
+section {
+    width: 100%;
+    display: inline-block;
+    background: #333;
+    height: 50vh;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+  
+  .footer-distributed{
+    background: #666;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+  }
+  
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right{
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  /* Footer left */
+  
+  .footer-distributed .footer-left{
+    width: 40%;
+  }
+  
+  /* The company logo */
+  
+  .footer-distributed h3{
+    color:  #ffffff;
+    margin: 0;
+  }
+  
+  .footer-distributed h3 span{
+    color:  lightseagreen;
+  }
+  
+  /* Footer links */
+  
+  .footer-distributed .footer-links{
+    color:  #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+  }
+  
+  .footer-distributed .footer-links a{
+    display:inline-block;
+    line-height: 1.8;
+    font-weight:400;
+    text-decoration: none;
+    color:  inherit;
+    font-size: 15px;
+  }
+  
+  .footer-distributed .footer-company-name{
+    color:  #222;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+  }
+  
+  /* Footer Center */
+
+  .footer-center a {
+    font-size: 12px; /* Ajusta este tamaño según tus necesidades */
+}
+  
+  .footer-distributed .footer-center{
+    width: 35%;
+  }
+  
+  .footer-distributed .footer-center i{
+    background-color:  #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+  }
+  
+  .footer-distributed .footer-center i.fa-envelope{
+    font-size: 17px;
+    line-height: 38px;
+  }
+  
+  .footer-distributed .footer-center p{
+    display: inline-block;
+    color: #ffffff;
+    font-weight:400;
+    vertical-align: middle;
+    margin:0;
+  }
+  
+  .footer-distributed .footer-center p span{
+    display:block;
+    font-weight: normal;
+    font-size:14px;
+    line-height:2;
+  }
+  
+  .footer-distributed .footer-center p a{
+    color:  lightseagreen;
+    text-decoration: none;;
+  }
+  
+  .footer-distributed .footer-links a:before {
+    content: "|";
+    font-weight:300;
+    font-size: 20px;
+    left: 0;
+    color: #fff;
+    display: inline-block;
+    padding-right: 5px;
+  }
+  
+  .footer-distributed .footer-links .link-1:before {
+    content: none;
+  }
+  
+  /* Footer Right */
+  
+  .footer-distributed .footer-right{
+    width: 20%;
+  }
+  
+  .footer-distributed .footer-company-about{
+    line-height: 20px;
+    color:  #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+  }
+  
+  .footer-distributed .footer-company-about span{
+    display: block;
+    color:  #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .footer-distributed .footer-icons{
+    margin-top: 25px;
+  }
+  
+  .footer-distributed .footer-icons a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color:  #33383b;
+    border-radius: 2px;
+  
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+  
+    margin-right: 3px;
+    margin-bottom: 5px;
+  }
+  
+  /* If you don't want the footer to be responsive, remove these media queries */
+  
+  @media (max-width: 880px) {
+  
+    .footer-distributed{
+      font: bold 14px sans-serif;
+    }
+  
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right{
+      display: block;
+      width: 100%;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+  
+    .footer-distributed .footer-center i{
+      margin-left: 0;
+    }
+  
+  }

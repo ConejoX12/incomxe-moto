@@ -1,0 +1,475 @@
+/* BARRA PRINCIPAL INFORMACION CONTACTO */
+* {
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.heading {
+    font-size: 4rem;
+    text-align: center;
+    padding: 6rem 1rem 0 0;
+    letter-spacing: .2rem;
+    font-weight: 600;
+}
+
+*::selection {
+    background-color: rgba(0, 150, 255, 0.1); /* Azul claro muy transparente */
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+body * {
+    text-transform: none;
+}
+
+header {
+    background-color: #ffffff;
+    color: #fff;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #000; /* Color negro para el icono */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #a6a6a6;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+header .navbar ul li .active,
+header .navbar ul li a:hover {
+    color: #121211;
+}
+
+.navbar ul li {
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li a {
+    color: #a6a6a6;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li a .fa-phone {
+    margin-right: 10px;
+    order: -1;
+}
+
+.navbar ul li a .fa-envelope {
+    margin-right: 10px;
+    order: -1;
+}
+
+.navbar ul li a .fa-whatsapp {
+    margin-right: 10px;
+    order: -1;
+}
+
+/* BARRA SECUNDARIA INFORMACION CONTACTO */
+.secondary-header {
+    background-color: rgb(234, 230, 230); /* Cambia el color de fondo */
+}
+
+.secondary-header .navbar ul li a {
+    color: #5e5d5d; /* Cambia el color del texto */
+}
+
+.secondary-header .navbar ul li:last-child {
+    margin-left: 75rem; /* Mueve el elemento "Ubicacion" hacia la derecha */
+}
+
+.navbar ul li a .fa-location-dot {
+    margin-right: 10px;
+    order: -1;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+}
+
+.support-box {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 250px;
+}
+
+.support-box h3 {
+    margin-top: 0;
+}
+
+.support-box p {
+    margin: 10px 0;
+}
+
+.support-box .close-btn {
+    text-align: right;
+    cursor: pointer;
+    color: red;
+}
+
+.navbar ul li .submenu {
+    display: none;
+    list-style: none;
+    padding-left: 20px;
+}
+
+.navbar ul li.menu-item-has-children.active .submenu {
+    display: block;
+}
+
+.menu-item-has-children a {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-item-has-children i {
+    margin-left: 1rem; /* Ajusta este valor según tus necesidades */
+    transform: rotate(0deg); /* Flecha inicialmente hacia la derecha */
+    transition: transform 0.3s; /* Añade una transición suave */
+}
+
+.menu-item-has-children i.rotate {
+    transform: rotate(90deg); /* Gira la flecha hacia arriba */
+}
+
+header .navbar .hide-in-secondary {
+    display: none;
+    /* Ajusta otros estilos según tu diseño */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+    nav.navbar {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #ffffff;
+        padding: 10px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+    nav.navbar.active {
+        display: flex;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    nav ul li {
+        width: 100%;
+        margin: 10px 0;
+    }
+    nav ul li a {
+        width: 100%;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    header .navbar .hide-in-secondary {
+        display: block;
+    }
+}
+
+/* MENÚ DE REGRESO BREADCRUMB */
+
+.breadcrumb {
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 10px;
+    overflow-x: auto; /* Permitir desplazamiento horizontal en dispositivos móviles */
+}
+.breadcrumb ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 5px;
+}
+.breadcrumb ul li {
+    display: inline;
+}
+.breadcrumb ul li a {
+    text-decoration: none;
+    color: #000;
+}
+.breadcrumb ul li::after {
+    content: ">";
+    margin: 0 5px;
+}
+.breadcrumb ul li:last-child::after {
+    content: "";
+}
+
+.breadcrumb::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #000; /* Line color */
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .breadcrumb {
+        font-size: 1em; /* Reducir el tamaño de fuente en dispositivos móviles */
+    }
+}
+
+
+/* Estilos para el título "Quiénes Somos" */
+#quienes-somos {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#quienes-somos h2 {
+    font-size: 24px; /* Tamaño de la fuente del título */
+    color: #333; /* Color del texto */
+}
+
+/* Estilos para el ícono centrado */
+#icono-quienes-somos {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#icono-quienes-somos i {
+    font-size: 48px; /* Tamaño del ícono */
+    color: #333; /* Color del ícono */
+}
+
+/* Estilos para el texto centrado */
+#texto-quienes-somos {
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 40px; /* Margen a la izquierda */
+    margin-right: 40px; /* Margen a la derecha */
+}
+
+#texto-quienes-somos p {
+    font-size: 16px; /* Tamaño de la fuente del texto */
+    color: #555; /* Color del texto */
+}
+
+/* Media query para ajuste en dispositivos móviles */
+@media screen and (max-width: 768px) {
+    #quienes-somos h2 {
+        font-size: 20px; /* Reducir el tamaño de la fuente del título */
+    }
+
+    #icono-quienes-somos i {
+        font-size: 36px; /* Reducir el tamaño del ícono */
+    }
+
+    #texto-quienes-somos p {
+        font-size: 14px; /* Reducir el tamaño de la fuente del texto */
+    }
+}
+
+
+/* Estilos para el título "Apartados" */
+.heading {
+    text-align: center;
+    color: #333;
+}
+
+/*Parte Apartados */
+
+.icon {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 10px;
+    }
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    padding: 4rem 0;
+    flex-wrap: wrap;
+}
+
+.service {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    height: 25rem;
+    width: 25rem;
+    margin: 3.5rem 2rem;
+    text-align: center;
+    border-radius: 1rem;
+}
+
+.services .service h2 {
+    color: #333;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.services .service p {
+    font-size: 1.3rem;
+    padding: 1rem 0;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+        .services {
+          grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+
+
+/* Estilos para los títulos "Estatal" y "Federal" */
+.section-container {
+    display: flex; /* Ajuste inicial para el diseño flexible */
+    justify-content: center;
+    padding: 4rem 0;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 85%;
+    grid-gap: 20px; /* Esto no es necesario con flexbox pero lo dejo en caso de futuras modificaciones */
+}
+
+.section-container-left {
+    text-align: center;
+    flex: 1;
+    margin: 0 20px;
+}
+
+.section-container .section-container-left h2 {
+    color: #333;
+    margin-top: 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.section-container-left img {
+    width: 60%;
+    right: 60%;
+    height: auto;
+    margin-top: 20px;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, .8));
+    transition: transform 0.3s ease-in-out;
+}
+
+.section-container-left img:hover,
+.section-container-left img:active {
+    transform: scale(1.1);
+}
+
+/* Responsive para dispositivos móviles */
+@media (max-width: 768px) {
+    .section-container {
+        flex-direction: column; /* Cambia la dirección del flexbox a columna */
+        padding: 2rem 0;
+    }
+
+    .section-container-left {
+        margin: 20px 0; /* Ajusta el margen para móviles */
+    }
+
+    .section-container-left img {
+        width: 80%; /* Ajusta el tamaño de la imagen para móviles */
+    }
+
+    .section-container .section-container-left h2 {
+        font-size: 18px; /* Ajusta el tamaño de la fuente para móviles */
+    }
+}
+
+/* Responsive para dispositivos aún más pequeños, como teléfonos en modo vertical */
+@media (max-width: 480px) {
+    .section-container {
+        padding: 1rem 0;
+    }
+
+    .section-container-left img {
+        width: 90%; /* Ajusta el tamaño de la imagen para teléfonos más pequeños */
+    }
+
+    .section-container .section-container-left h2 {
+        font-size: 16px; /* Ajusta el tamaño de la fuente para teléfonos más pequeños */
+    }
+}
+
+
+  
+

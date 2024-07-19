@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motorola Radiocomunication</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+    </style>
+</head>
+<body>
+    <!-- BARRA PRINCIPAL INFORMACION CONTACTO -->
+    <header>
+        <div class="logo">
+            <img src="Motorola Logo.png" alt="Logo">
+        </div>
+        <div class="menu-icon" id="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="mailto:renedejesusrangel228@gmail.com">Tafolla@incomxe.com.mx <i class="fa-solid fa-envelope" style="color: #000000;"></i></a></li>
+                <li><a href="tel:464-133-7574">464-648-1628 <i class="fa-solid fa-phone" style="color: #000000;"></i></a></li>
+                <li><a href="https://wa.me/524641337574">464-651-6344 <i class="fa-brands fa-whatsapp" style="color: #000000;"></i></a></li>
+    
+                <li class="hide-in-secondary"><a href="#">Menú</a></li>
+    
+                <li class="menu-item-has-children hide-in-secondary">
+                    <a href="#" id="Nosotros-link">Nosotros <i class="fa-solid fa-chevron-down" id="toggle-submenu"></i></a>
+                    <ul class="submenu">    
+                        <li><a href="nosotros.html">Quienes somos</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item-has-children hide-in-secondary">
+                    <a href="#" id="support-link">Support <i class="fa-solid fa-chevron-down" id="toggle-support-submenu"></i></a>
+                    <ul class="submenu">    
+                        <li><a href="#support-box">¿Necesitas ayuda?</a>
+                            <a href="mailto:carlosdanielconejo2@gmail.com">support@gmail.com</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="hide-in-secondary"><a href="https://www.google.com/maps/place/C. Pasajero 620, Centro, 36700 Salamanca, Gto.">Salamanca Guanajuato, Pasajero #620 Col. Centro. C.P. 36700 <i class="fa-solid fa-location-dot" style="color: #000000;"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <!-- BARRA SECUNDARIA INFORMACION CONTACTO -->
+    <header class="secondary-header">
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Menú</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="#" class="support-link" id="support-link">Support</a></li>
+                <li><a href="https://www.google.com/maps/place/C. Pasajero 620, Centro, 36700 Salamanca, Gto.">Salamanca Guanajuato, Pasajero #620 Col. Centro. C.P. 36700 <i class="fa-solid fa-location-dot" style="color: #000000;"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="support-box" class="support-box">
+        <div class="close-btn" id="close-support">X</div>
+        <h3>¿Necesitas ayuda?</h3>
+        <p>Estamos aquí para asistirte. Contacta con nuestro equipo de soporte para obtener ayuda.</p>
+        <p><strong>Contacto:</strong> <a href="mailto:support@example.com">support@example.com</a></p>
+    </div>
+
+
+    <!-- BARRA TERCERA -->
+    <header class="third-header">
+        <nav class="navbar">
+            <ul>
+                <li class="mototrbo"><a href="#">MOTOTRBO™ R7</a></li>
+                <li class="details-product"><a href="#">Detalles Producto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- BARRA DE NAVEGACION (BREADCRUMB) -->
+    <div class="breadcrumb">
+        <ul>
+            <li><a href="../../index.html">Inicio</a></li>
+            <li><a href="../../index.html#productos">Productos</a></li>
+            <li><a href="../index.html"">Radios Portatiles</a></li>
+            <li id="breadcrumb-radio-name">MOTOTRBO™ R7</li>
+        </ul>
+    </div>
+
+
+    <div id="MOTOTRBO R2">
+    <div class="thumbnail-container">
+        <img class="thumbnail" src="mototrbo r7/R7 SERIES.png" alt="Imagen 1" onclick="changeImage('mototrbo r7/R7 SERIES.png', 'Título de la Imagen 1', 'Resumen de la Imagen 1')">
+        <img class="thumbnail" src="mototrbo r7/R7 SERIES(2).png" alt="Imagen 1" onclick="changeImage('mototrbo r7/R7 SERIES(2).png', 'Título de la Imagen 1', 'Resumen de la Imagen 1')">
+        <img class="thumbnail" src="mototrbo r7/R7 SERIES(3).png" alt="Imagen 2" onclick="changeImage('mototrbo r7/R7 SERIES(3).png', 'Título de la Imagen 2', 'Resumen de la Imagen 2')">
+        <img class="thumbnail" src="mototrbo r7/R7 SERIES(4).png" alt="Imagen 3" onclick="changeImage('mototrbo r7/R7 SERIES(4).png', 'Título de la Imagen 3', 'Resumen de la Imagen 3')">
+    </div>
+
+    <!-- Imagen grande -->
+     <div class="main-container">
+    <div class="main-image" id="mainImageContainer">
+        <div class="zoom-container"> <!-- Asegúrate de que el contenedor de zoom envuelve la imagen grande y el cuadro de zoom -->
+            <img id="largeImage" src="mototrbo r7/R7 SERIES.png" alt="Imagen Grande">
+            <div class="zoom-box"></div>
+        </div>
+        <div class="image-details">
+            <h2>MOTOTRBO™ R7 Radio Digital Portable de Dos Vías</h2>
+            <p>MOTOTRBO R7 ofrece capacidades de audio revolucionarias en un dispositivo con grandes características. Su procesamiento de audio avanzado garantiza comunicaciones fuertes y claras, su diseño robusto está preparado para entornos difíciles, y las opciones avanzadas de conectividad preparan a su personal al futuro.</p>
+            <button id="buyButton">Comprar</button>
+            <hr class="separator">
+            
+            <div class="parent-container">
+                <div class="info-buttons-container">
+                    <nav class="navbarr">
+                        <div class="menu-item">
+                            <button class="dropdown-btn">PDF Y VIDEO <i class="fa-solid fa-chevron-down"></i></button>
+                            <div class="dropdown-content">
+                                <div class="dropdown-left">
+                                    <div class="dropdown-header"></div>
+                                    <p>DESCUBRE LOS MANUALES DE MOTOTRBO R7 PARA OBTENER MUCHA MAS INFORMACIÓN</p>
+                                </div>
+                                <div class="dropdown-right">
+                                    <div class="dropdown-section">
+                                        <div class="dropdown-header">DATASHEET</div>
+                                        <p><a href="mototrbo r7/DataSheet_MototrboR7_ES.pdf" target="_blank">DATASHEET</a> <span>(Dar clic)</span></p>
+                                    </div>
+                                    <div class="dropdown-section">
+                                        <div class="dropdown-header">BROCHURE</div>
+                                        <p><a href="mototrbo r7/Mototrbo-r7_brochure_spread-ES.pdf" target="_blank">BROCHURE</a> <span>(Dar clic)</span></p>
+                                    </div>
+                                    <div class="dropdown-right">
+                                        <div class="dropdown-section">
+                                            <div class="dropdown-header">VIDEO</div>
+                                            <p><a href="" id="videoLink">DISPONIBLE PRONTO</a> <span>(Dar clic)</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="info-buttons-container">
+                    <nav class="navbarr">
+                        <div class="menu-item second-menu">
+                            <button class="dropdown-btn">CARACTERISTICAS <i class="fa-solid fa-chevron-down"></i></button>
+                            <div class="dropdown-content">
+                                <div class="dropdown-left">
+                                    <div class="dropdown-header"></div>
+                                    <p>Apto para los negocios
+                                        Construcción robusta, listo para mantener a su equipo conectado con cobertura de voz personalizada y equipado con cobertura de servicio y funciones de seguridad con visión de futuro para minimizar el tiempo de inactividad del dispositivo, MOTOTRBO R7 ha sido diseñado para empresas y probado para resistir los entornos más difíciles.</p>
+                                </div>
+                                <div class="dropdown-right">
+                                    <div class="dropdown-section">
+                                        <div class="dropdown-header">El poder de ser escuchado</div>
+                                        <p>Procesamiento avanzado asegura comunicaciones claras.<br> Diseño robusto para entornos difíciles.<br> Opciones avanzadas de conectividad disponibles.</p>
+                                    </div>
+                                    <div class="dropdown-section">
+                                        <div class="dropdown-header">Fuerte y Claro</div>
+                                        <p>Superior cancelación de ruido y volumen claro.<br> Destacado en comunicaciones de audio desafiantes.<br>Escuchar y ser escuchado en cualquier lugar.</p>
+                                    </div>
+                                    <div class="dropdown-section">
+                                        <div class="dropdown-header">Preparado para el mañana</div>
+                                        <p> Preparado para necesidades actuales y futuras.<br> Diseño actualizado y conectividad moderna.<br> Con visión de futuro para mantenerse conectado.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="videoModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <video controls>
+            <source src="ruta-al-video.mp4" type="video/mp4">
+            Tu navegador no soporta la etiqueta de video.
+        </video>
+    </div>
+</div>
+
+
+    <!-- Cuadro flotante para cómo comprar -->
+<div class="popup" id="buyPopup">
+    <div class="popup-content">
+        <span class="close-popup" onclick="closePopup()">×</span>
+        <h2>COMO COMPRAR</h2>
+        <p>COMUNICATE CON NOSOTROS</p>
+        <div class="contact">
+            <img src="icono cel.png" alt="Teléfono" class="icon">
+            <p><a href="tel:464-133-7574">Contacto: 123-456-7890</a></p>
+        </div>
+        <div class="contact">
+            <img src="icono email.png" alt="Correo" class="icon">
+            <p><a href="mailto:renedejesusrangel228@gmail.com">Contacto: example@example.com</a></p>
+        </div>
+    </div>
+</div>
+
+
+<!-- RECUADRO FINAL  -->
+
+<footer class="footer-distributed" id="contac">
+    
+    <div class="footer-left">
+
+      <h3>Motorola<span>Radiocomunication</span></h3>
+
+      <p class="footer-links">
+        <a href="../index.html" class="link-1">Home</a>
+      
+        <a href="../index.html#review">Productos</a>
+      
+        <a href="../RADIOS PORTATILES/index.html">Radios portatiles</a>
+        
+        <a href="../RADIOS MOVILES/index.html">Radios Moviles</a>
+        
+        <a href="contac">Contact</a>
+      </p>
+
+      <p class="footer-company-name">Company C&R Global Services © 2024</p>
+    </div>
+
+    <div class="footer-center">
+
+      <div>
+            <i class="fa fa-map-marker"></i>
+            <p>
+                <a href="https://www.google.com/maps?q=Pasajero+%23620+Col.+Centro,+Salamanca,+Gto." target="_blank">
+                    <span>Pasajero #620 Col. Centro.</span> Salamanca, Gto.
+                </a>
+            </p>
+      </div>
+
+      <div>
+            <i class="fa fa-phone"></i>
+            <p> <a href="tel:464-126-11-47">464-126-11-47</a> / 
+                <a href="tel:464-64-816-28">464-64-816-28</a>
+            </p>
+      </div>
+
+      <div>
+            <i class="fa fa-envelope"></i>
+            <p> <a href="mailto:ventas@kenwood.mx">ventas@kenwood.mx</a> / 
+                <a href="mailto:ventas2@kenwood.mx">ventas2@kenwood.mx</a>
+            </p>
+      </div>
+
+    </div>
+
+    <div class="footer-right">
+
+      <p class="footer-company-about">
+        <span>About the company</span>
+        Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+      </p>
+
+      <div class="footer-icons">
+
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+<!-- Credit to https://epicbootstrap.com/snippets/footer-with-columns -->
+
+    
+
+    <script src="radios.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,19 @@
+[
+    {
+        "title": "MOTOTRBO R2",
+        "description": "El MOTOTRBO R2 es un potente equipo de última generación que unifica durabilidad y ergonomía...",
+        "img": "MOTOTRBO™ R2.png",
+        "manual_pdf": "mototrbor2_datasheet.pdf",
+        "brochure_pdf": "mototrbor2_brochure.pdf",
+        "video": "MOTOTRBO R2 (Español)(1080P_HD).mp4"
+    },
+    {
+        "title": "Radios portátiles de dos vías Serie DEP™500e",
+        "description": "Con soporte de sistemas y audio fuerte y claro, estos radios de próxima generación...",
+        "img": "Radio2.jpg",
+        "manual_pdf": "dep500e_datasheet.pdf",
+        "brochure_pdf": "dep500e_brochure.pdf",
+        "video": "DEP500e_video.mp4"
+    }
+    
+]

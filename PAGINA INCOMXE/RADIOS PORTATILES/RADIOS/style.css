@@ -1,0 +1,951 @@
+/* BARRA PRINCIPAL INFORMACION CONTACTO */
+* {
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.heading {
+    font-size: 4rem;
+    text-align: center;
+    padding: 6rem 1rem 0 0;
+    letter-spacing: .2rem;
+    font-weight: 600;
+}
+
+*::selection {
+    background-color: rgba(0, 150, 255, 0.1); /* Azul claro muy transparente */
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #ffffff;
+    color: #fff;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #000; /* Color negro para el icono */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #a6a6a6;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+header .navbar ul li .active,
+header .navbar ul li a:hover {
+    color: #121211;
+}
+
+.navbar ul li {
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li a {
+    color: #a6a6a6;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li a .fa-phone {
+    margin-right: 10px;
+    order: -1;
+}
+
+.navbar ul li a .fa-envelope {
+    margin-right: 10px;
+    order: -1;
+}
+
+.navbar ul li a .fa-whatsapp {
+    margin-right: 10px;
+    order: -1;
+}
+
+/* BARRA SECUNDARIA INFORMACION CONTACTO */
+.secondary-header {
+    background-color: rgb(234, 230, 230); /* Cambia el color de fondo */
+}
+
+.secondary-header .navbar ul li a {
+    color: #5e5d5d; /* Cambia el color del texto */
+}
+
+.secondary-header .navbar ul li:last-child {
+    margin-left: 75rem; /* Mueve el elemento "Ubicacion" hacia la derecha */
+}
+
+.navbar ul li a .fa-location-dot {
+    margin-right: 10px;
+    order: -1;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+}
+
+.support-box {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 250px;
+}
+
+.support-box h3 {
+    margin-top: 0;
+}
+
+.support-box p {
+    margin: 10px 0;
+}
+
+.support-box .close-btn {
+    text-align: right;
+    cursor: pointer;
+    color: red;
+}
+
+.navbar ul li .submenu {
+    display: none;
+    list-style: none;
+    padding-left: 20px;
+}
+
+.navbar ul li.menu-item-has-children.active .submenu {
+    display: block;
+}
+
+.menu-item-has-children a {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-item-has-children i {
+    margin-left: 1rem; /* Ajusta este valor según tus necesidades */
+    transform: rotate(0deg); /* Flecha inicialmente hacia la derecha */
+    transition: transform 0.3s; /* Añade una transición suave */
+}
+
+.menu-item-has-children i.rotate {
+    transform: rotate(90deg); /* Gira la flecha hacia arriba */
+}
+
+header .navbar .hide-in-secondary {
+    display: none;
+    /* Ajusta otros estilos según tu diseño */
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+    nav.navbar {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #ffffff;
+        padding: 10px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+    nav.navbar.active {
+        display: flex;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    nav ul li {
+        width: 100%;
+        margin: 10px 0;
+    }
+    nav ul li a {
+        width: 100%;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    header .navbar .hide-in-secondary {
+        display: block;
+    }
+}
+
+/* BARRA TERCERA INFORMACION CONTACTO */
+.third-header {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 0;
+}
+
+.third-header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.third-header .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.third-header .navbar ul li {
+    display: inline-block;
+    margin-right: 80rem;
+}
+
+.third-header .navbar ul li:last-child {
+    margin-right: 0;
+}
+
+.third-header .navbar ul li a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.third-header .navbar ul li.mototrbo {
+    float: right;
+}
+
+@media (max-width: 768px) {
+    .third-header .navbar ul li {
+        margin-right: 0; /* Elimina el margen derecho en pantallas pequeñas */
+    }
+
+    .third-header .navbar ul li.details-product {
+        display: none; /* Oculta el elemento "Detalles Producto" en pantallas pequeñas */
+    }
+
+    .third-header .navbar ul li.mototrbo {
+        display: none;
+    }
+
+}
+
+/* MENÚ DE REGRESO BREADCRUMB */
+
+.breadcrumb {
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 0px;
+    background-color: #fff;
+    overflow-x: auto; /* Permitir desplazamiento horizontal en dispositivos móviles */
+}
+.breadcrumb ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 5px;
+}
+.breadcrumb ul li {
+    display: inline;
+}
+.breadcrumb ul li a {
+    text-decoration: none;
+    color: #000;
+}
+.breadcrumb ul li::after {
+    content: ">";
+    margin: 0 5px;
+}
+.breadcrumb ul li:last-child::after {
+    content: "";
+}
+
+.breadcrumb::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #000; /* Line color */
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .breadcrumb {
+        font-size: 1em; /* Reducir el tamaño de fuente en dispositivos móviles */
+    }
+}
+
+
+
+
+/* IMAGENES PEQUEÑAS */
+.thumbnail-container {
+    display: flex;
+    flex-direction: row; /* Alinea las miniaturas horizontalmente */
+    margin-left: 15rem; /* Añade espacio entre la imagen grande y las miniaturas */
+}
+
+.thumbnail {
+    width: 100px;
+    height: 70px;
+    margin-right: 15px;
+    margin-bottom: 10px; /* Ajusta el margen entre las miniaturas */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border: 1px solid #ccc; /* Agrega un borde alrededor de cada miniatura */
+    border-radius: 5px; /* Ajusta el radio del borde para suavizarlo */
+}
+
+.thumbnail:last-child {
+    margin-right: 0; /* Elimina el margen derecho para el último elemento */
+}
+
+.thumbnail:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para pantallas pequeñas (celulares) */
+@media (max-width: 768px) {
+    .thumbnail-container {
+        flex-direction: column; /* Cambia la dirección a vertical en dispositivos móviles */
+        margin-left: 0; /* Elimina el margen izquierdo en dispositivos móviles */
+    }
+
+    .thumbnail {
+        margin-right: 0; /* Elimina el margen derecho en dispositivos móviles */
+        margin-bottom: 10px; /* Ajusta el margen entre las miniaturas en dispositivos móviles */
+    }
+}
+
+/* GALERIA Imagen grande */
+
+.main-image {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.main-image img {
+    max-width: 800px;
+    max-height: 60rem;
+    margin-right: 20px;
+}
+
+#largeImage {
+    width: 60rem;
+}
+
+
+
+.zoom-container {
+    position: relative;
+    display: inline-block;
+}
+
+.zoom-box {
+    position: absolute;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.5);
+    pointer-events: none; /* Para que el cuadro de zoom no interfiera con los eventos del ratón */
+    display: none; /* Ocultar inicialmente el cuadro de zoom */
+}
+
+
+@media screen and (max-width: 767px) {
+    .main-image {
+        flex-direction: column; /* Cambia la dirección de la fila a columna */
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+
+    .main-image img {
+        max-width: 100%; /* La imagen se ajusta al ancho del contenedor */
+        max-height: none; /* Elimina la altura máxima para permitir que la imagen se ajuste proporcionalmente */
+        margin-right: 0; /* Elimina el margen derecho */
+        margin-bottom: 20px; /* Agrega espacio entre la imagen y el cuadro de zoom */
+    }
+
+    .zoom-container {
+        display: block; /* Cambia a bloque para ocupar todo el ancho */
+        margin-right: 0; /* Elimina el margen derecho */
+        text-align: center; /* Centra el cuadro de zoom */
+    }
+
+    .zoom-box {
+        position: static; /* Cambia la posición a estática para que siga el flujo del documento */
+        display: block; /* Muestra el cuadro de zoom */
+        margin-top: 10px; /* Añade espacio encima del cuadro de zoom */
+    }
+}
+
+/* TITULO Y DESCRIPCION DE LAS IMAGENES */
+
+.image-details {
+    margin-left: 40px; /* Ajusta el margen izquierdo para separar del contenedor de imagen */
+}
+
+.image-details h2,
+.image-details p {
+    margin: 0; /* Elimina el margen predeterminado de los elementos de texto */
+}
+
+.image-details h2 {
+    margin-bottom: 40px; /* Agrega separación entre el título y la descripción */
+    font-size: 50px;
+}
+
+.image-details p {
+    margin-bottom: 20px; /* Agrega separación entre la descripción y el botón */
+    font-size: 15px;
+    text-transform: none;
+}
+
+@media screen and (max-width: 767px) {
+    .image-details {
+        margin-left: 0; /* Elimina el margen izquierdo en dispositivos móviles */
+        text-align: center; /* Centra el contenido */
+    }
+
+    .image-details h2 {
+        font-size: 40px; /* Reduce el tamaño del título */
+        margin-bottom: 20px; /* Reduzca la separación entre el título y la descripción */
+    }
+
+    .image-details p {
+        font-size: 14px; /* Reduce el tamaño de la descripción */
+        margin: 0 20px; /* Agrega un margen a la izquierda y derecha de la descripción */
+        margin-bottom: 10px; /* Reduzca la separación entre la descripción y el botón */
+    }
+}
+
+.image-details button {
+    margin-top: 10px; /* Agrega separación entre el botón y la descripción */
+    padding: 15px 30px; /* Aumenta el tamaño del botón */
+    font-size: 16px; /* Aumenta el tamaño del texto del botón */
+    border-radius: 25px; /* Hace los bordes redondos */
+    background-color: #fff; /* Establece el color de fondo a beige */
+    border: none; /* Elimina cualquier borde por defecto */
+    color: #4b4c4d; /* Establece el color del texto */
+    cursor: pointer; /* Cambia el cursor a pointer cuando se pasa sobre el botón */
+    transition: background-color 0.3s ease; /* Añade una transición suave para el cambio de color de fondo */
+}
+
+.image-details button:hover {
+    background-color: #e0e0c1; /* Cambia el color de fondo en el hover */
+}
+
+.separator {
+    border-top: 1px solid black;
+    margin-top: 30px; /* Ajusta el espacio entre el botón y la línea */
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 767px) {
+    .separator {
+        margin-right: 20px; /* Ajusta el margen a la derecha del separador */
+        margin-left: 20px; /* Ajusta el margen a la izquierda del separador */
+    }
+}
+
+
+
+/* Estilos para los botones de información */
+
+.parent-container {
+    display: flex; /* Alinea los hijos horizontalmente */
+    flex-wrap: wrap;
+}
+.info-buttons-container {
+    display: flex;
+    justify-content: space-around; /* Espacio igual entre contenedores */
+    width: 50%; /* Ajusta el ancho de cada contenedor */
+}
+.navbarr {
+    padding: 10px;
+    display: flex; /* Asegura que los elementos hijos se alineen horizontalmente */
+    justify-content: space-between; /* Espacio igual entre elementos */
+}
+.menu-item {
+    position: relative;
+    display: inline-block;
+}
+
+
+.dropdown-btn {
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: #333; /* Fondo del botón */
+    margin-bottom: 20px;
+}
+.dropdown-btn:hover,
+.dropdown-btn:focus {
+    background: #444;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(102, 102, 102, 0.1); /* Gris #666 con 20% de opacidad */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 600px; /* Ajusta el ancho para que quepan ambas secciones */
+    top: 100%; /* Asegura que el menú aparezca debajo del botón */
+    left: 0;
+}
+.second-menu .dropdown-content {
+    right: 0;
+    left: auto;
+}
+.dropdown-left {
+    background-color: #666;
+    padding: 20px;
+    width: 200px;
+    color: white;
+}
+.dropdown-right {
+    padding: 10px;
+    flex-grow: 1; /* Hace que tome el espacio restante */
+}
+.dropdown-section {
+    padding: 10px;
+    border-bottom: 1px solid #555;
+}
+.dropdown-header {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.dropdown-content p {
+    margin: 0;
+    font-size: 12px;
+}
+.menu-item:hover .dropdown-content,
+.menu-item:focus-within .dropdown-content {
+    display: flex;
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Habilita el scroll si es necesario */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con opacidad */
+}
+.modal-content {
+    position: relative;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80%;
+    max-width: 800px; /* Tamaño máximo del video */
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Media Queries para móviles */
+@media (max-width: 768px) {
+    .parent-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .info-buttons-container {
+        width: 100%;
+        padding: 0;
+        justify-content: center;
+    }
+    .navbarr {
+        flex-direction: column;
+    }
+    .dropdown-content {
+        width: 90vw; /* Ajusta el ancho del dropdown en móviles */
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #f0f0f0; /* Fondo gris claro en móviles */
+    }
+
+    .second-menu .dropdown-content {
+        left: 50%;
+        transform: translateX(-50%);
+        right: auto;
+        background-color: #f0f0f0; /* Fondo gris claro en móviles */
+    }
+
+    .dropdown-left,
+    .dropdown-right {
+        width: 100%;
+    }
+}
+
+
+
+/* CUADRO FLOTANTE COMPRAR */
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    transition: transform 0.3s ease-out;
+    box-sizing: border-box;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.popup-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    width: 50%;
+    height: 40%;
+    max-width: 600px;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact p {
+    margin-left: 10px;
+    font-size: 15px;
+    margin-top: 35px;
+}
+
+.popup-content h2 {
+    margin-bottom: 20px; /* Ajusta el margen inferior para separar el título de la descripción */
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-top: 25px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .popup-content {
+        width: 90%;
+        height: auto;
+        max-width: none;
+        margin: 10% auto;
+        padding: 15px;
+    }
+
+    .contact p {
+        font-size: 14px;
+        margin-top: 25px;
+    }
+
+    .icon {
+        width: 18px;
+        height: 18px;
+        margin-top: 20px;
+    }
+
+    .popup-content h2 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .close-popup {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* RECUADRO FINAL */
+
+
+
+section {
+    width: 100%;
+    display: inline-block;
+    background: #333;
+    height: 50vh;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+  
+  .footer-distributed{
+    background: #666;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+    margin-top: 20px; /* Ajusta según sea necesario */
+  }
+  
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right{
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  /* Footer left */
+  
+  .footer-distributed .footer-left{
+    width: 40%;
+  }
+  
+  /* The company logo */
+  
+  .footer-distributed h3{
+    color:  #ffffff;
+    margin: 0;
+  }
+  
+  .footer-distributed h3 span{
+    color:  lightseagreen;
+  }
+  
+  /* Footer links */
+  
+  .footer-distributed .footer-links{
+    color:  #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+  }
+  
+  .footer-distributed .footer-links a{
+    display:inline-block;
+    line-height: 1.8;
+    font-weight:400;
+    text-decoration: none;
+    color:  inherit;
+  }
+  
+  .footer-distributed .footer-company-name{
+    color:  #222;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+  }
+  
+  /* Footer Center */
+  
+  .footer-distributed .footer-center{
+    width: 35%;
+  }
+  
+  .footer-distributed .footer-center i{
+    background-color:  #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+  }
+  
+  .footer-distributed .footer-center i.fa-envelope{
+    font-size: 17px;
+    line-height: 38px;
+  }
+  
+  .footer-distributed .footer-center p{
+    display: inline-block;
+    color: #ffffff;
+    font-weight:400;
+    vertical-align: middle;
+    margin:0;
+  }
+  
+  .footer-distributed .footer-center p span{
+    display:block;
+    font-weight: normal;
+    font-size:14px;
+    line-height:2;
+  }
+  
+  .footer-distributed .footer-center p a{
+    color:  lightseagreen;
+    text-decoration: none;;
+  }
+  
+  .footer-distributed .footer-links a:before {
+    content: "|";
+    font-weight:300;
+    font-size: 20px;
+    left: 0;
+    color: #fff;
+    display: inline-block;
+    padding-right: 5px;
+  }
+  
+  .footer-distributed .footer-links .link-1:before {
+    content: none;
+  }
+  
+  /* Footer Right */
+  
+  .footer-distributed .footer-right{
+    width: 20%;
+  }
+  
+  .footer-distributed .footer-company-about{
+    line-height: 20px;
+    color:  #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+  }
+  
+  .footer-distributed .footer-company-about span{
+    display: block;
+    color:  #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .footer-distributed .footer-icons{
+    margin-top: 25px;
+  }
+  
+  .footer-distributed .footer-icons a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color:  #33383b;
+    border-radius: 2px;
+  
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+  
+    margin-right: 3px;
+    margin-bottom: 5px;
+  }
+  
+  /* If you don't want the footer to be responsive, remove these media queries */
+  
+  @media (max-width: 880px) {
+  
+    .footer-distributed{
+      font: bold 14px sans-serif;
+    }
+  
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right{
+      display: block;
+      width: 100%;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+  
+    .footer-distributed .footer-center i{
+      margin-left: 0;
+    }
+  
+  }
